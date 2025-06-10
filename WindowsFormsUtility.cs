@@ -16,12 +16,12 @@ namespace CPUWindowsFormFramework
         {
             InitializeComponent();
         }
-            
-            public static void SetListButtons(ComboBox lst, DataTable sourcedt, DataTable targetdt,string tablename)
+
+        public static void SetListButtons(ComboBox lst, DataTable sourcedt, DataTable targetdt, string tablename, string displayColumn)
         {
             lst.DataSource = sourcedt;
             lst.ValueMember = tablename + "Id";
-            lst.DisplayMember = lst.Name.Substring(3);
+            lst.DisplayMember = displayColumn;
             lst.DataBindings.Add("SelectedValue", targetdt, lst.ValueMember, false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
