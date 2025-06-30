@@ -17,7 +17,7 @@ namespace CPUWindowsFormFramework
             InitializeComponent();
         }
 
-        public static void SetListButtons(ComboBox lst, DataTable sourcedt, DataTable targetdt, string tablename)
+        public static void SetListButtons(ComboBox lst, DataTable sourcedt, DataTable targetdt, string tablename, string displayColumn)
         {
             lst.DataSource = sourcedt;
             lst.ValueMember = tablename + "Id";
